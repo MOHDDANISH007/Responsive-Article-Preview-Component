@@ -1,0 +1,165 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: rgb(236, 242, 248);
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Use min-height to allow content expansion */
+    letter-spacing: 1;
+}
+
+.container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    /* Make container responsive */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Ensure content doesn't overflow */
+    flex-direction: row;
+    /* Flexbox row direction */
+}
+
+.img-container {
+    background-image: url('drawers.jpg');
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.text-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+
+}
+
+.h2 h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.para p {
+    margin-top: 10px;
+    color: #666;
+
+}
+
+.imges {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    /* Maintains relative positioning */
+}
+
+.three-images img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.text {
+    position: absolute;
+    left: 65px;
+    color: #333;
+}
+
+.share-icon {
+    position: absolute;
+    right: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Style the share options box */
+.share-box {
+    display: none;
+    /*Hidden by default */
+    position: absolute;
+    bottom: 50px;
+    /* Adjust this based on your layout */
+    right: 10px;
+    background-color: rgb(72, 85, 106);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.share-box h3 {
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    color: white;
+}
+
+.share-box a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    /* display: block; */
+}
+
+.share-box a:hover {
+    color: #ddd;
+}
+
+/* Class to show the box */
+.visible {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 30px;
+        /* Add padding to body on small screens */
+    }
+
+    .container {
+        flex-direction: column;
+        /* Stack items vertically on small screens */
+    }
+
+    .img-container {
+        width: 100%;
+        /* Ensure image container takes full width */
+        height: 200px;
+        /* Set a specific height for the image container */
+        background-size: cover;
+        /* Ensure the image covers the container */
+        background-position: center;
+        /* Center the background image */
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .share-box{
+        position: absolute;
+        bottom: -19px;
+        right: -17px;
+        width: 105%;
+        max-width: 456px;
+        height: 74px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}

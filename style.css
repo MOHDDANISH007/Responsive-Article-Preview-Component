@@ -155,11 +155,10 @@ body {
 
     .share-box{
         position: absolute;
-        bottom: -19px;
-        right: -17px;
-        width: 105%;
-        max-width: 456px;
-        height: 74px;
+        bottom: 55px;
+        right: -18px;
+       
+    
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 }
